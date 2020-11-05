@@ -1,30 +1,75 @@
 <script>
-	export let name;
+import Navbar from "./components/navbar.svelte"
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div class="parent_div">
+	
+	<section class="child1">
+		<div class="child1_container">
+			<div class="navbar"><Navbar/></div>
+						<div class="details_parent">
+				<div class="detail_child1">
+					<div>bdetail</div>
+					<div>bdetail</div>
+					<div>bdetail</div>
+				</div>
+				<div class="detail_child2">2</div>
+				<div class="detail_child3">3</div>
+			</div>
+		</div>
+	</section>
+	<section class="child2">22</section>
+</div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+	:global(*){
+		box-sizing: border-box;
+	}
+	.parent_div{
+		display: flex;
+		flex-direction: column;
+		margin-left: 5%;
+		margin-right: 5%;
+		border:1px solid black;
+		height: 100vh;
+	}
+	.child1{
+		height: 40%;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid green;
+	}
+	.child2{
+		height: 60%;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	.details_parent{
+		display: flex;
+		justify-content: space-between;
+		flex: 1;
 	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	.navbar{
+		height: 10%;
 	}
+	.details_parent{
+		height: 90%;
+	}
+	
+.child1_container{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.detail_child1{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.details_parent > div{
+	width: 33.3%;
+	height: 100%;
+}
+.detail_child1 > div{
+	height:33.3%;
+}
 </style>
