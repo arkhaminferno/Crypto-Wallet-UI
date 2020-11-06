@@ -1,7 +1,12 @@
 <div class="navbar_parent">
-<div class="navbar_child1">1</div>
-<div class="navbar_child2">2</div>
-<div class="navbar_child3">3</div>
+<div class="navbar_child1">LOGO</div>
+    <div>DASHBOARD</div>
+    <div>EXCHANGE</div>
+    <div>STE BANK</div>
+    <div>AFFILIATE</div>
+    <div>ABOUT</div>
+
+<div class="navbar_child2">3</div>
 </div>
 
 <style>
@@ -11,9 +16,10 @@
         flex: 1;
         border:1px solid red;
     }
-.navbar_parent > div{
-    width:33.3%;
-}
+
+    
+
    
+
 
 </style>
